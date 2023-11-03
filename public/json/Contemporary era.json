@@ -1,0 +1,150 @@
+{"unit": "year",
+"array" : [
+    {
+      "summary": "World War I",
+      "year": 1914,
+      "topic": ["World", "20th Century"]
+    },
+    {
+      "summary": "Russian Revolution",
+      "year": 1917,
+      "topic": ["Russia", "20th Century"]
+    },
+    {
+      "summary": "Great Depression",
+      "year": 1929,
+      "topic": ["United States", "20th Century"]
+    },
+    {
+      "summary": "World War II",
+      "year": 1939,
+      "topic": ["World", "20th Century"]
+    },
+    {
+      "summary": "The Holocaust",
+      "year": 1941,
+      "topic": ["Europe", "20th Century"]
+    },
+    {
+      "summary": "The Moon Landing",
+      "year": 1969,
+      "topic": ["United States", "20th Century"]
+    },
+    {
+      "summary": "Fall of the Berlin Wall",
+      "year": 1989,
+      "topic": ["Germany", "20th Century"]
+    },
+    {
+      "summary": "9/11 Attacks",
+      "year": 2001,
+      "topic": ["United States", "21st Century"]
+    },
+    {
+      "summary": "COVID-19 Pandemic",
+      "year": 2019,
+      "topic": ["World", "21st Century"]
+    },
+    {
+      "summary": "Afghanistan War",
+      "year": 2001,
+      "topic": ["Afghanistan", "21st Century"]
+    },
+    {
+      "summary": "Spanish Civil War",
+      "year": 1936,
+      "topic": ["Spain", "20th Century"]
+    },
+    {
+      "summary": "Korean War",
+      "year": 1950,
+      "topic": ["Korea", "20th Century"]
+    },
+    {
+      "summary": "Cuban Missile Crisis",
+      "year": 1962,
+      "topic": ["United States", "20th Century"]
+    },
+    {
+      "summary": "Vietnam War",
+      "year": 1955,
+      "topic": ["Vietnam", "20th Century"]
+    },
+    {
+      "summary": "Civil Rights Movement started",
+      "year": 1954,
+      "topic": ["United States", "20th Century"]
+    },
+    {
+      "summary": "Chinese Cultural Revolution",
+      "year": 1966,
+      "topic": ["China", "20th Century"]
+    },
+    {
+      "summary": "Chernobyl Disaster",
+      "year": 1986,
+      "topic": ["Ukraine", "20th Century"]
+    },
+    {
+      "summary": "Rwandan Genocide",
+      "year": 1994,
+      "topic": ["Rwanda", "20th Century"]
+    },
+    {
+      "summary": "Fall of the Soviet Union",
+      "year": 1991,
+      "topic": ["Russia", "20th Century"]
+    },
+    {
+      "summary": "European Union Formation",
+      "year": 1993,
+      "topic": ["Europe", "20th Century"]
+    },
+    {
+      "summary": "Arab Spring started",
+      "year": 2010,
+      "topic": ["Middle East", "21st Century"]
+    },
+    {
+      "summary": "Fukushima Nuclear Disaster",
+      "year": 2011,
+      "topic": ["Japan", "21st Century"]
+    },
+    {
+      "summary": "Brexit",
+      "year": 2016,
+      "topic": ["United Kingdom", "21st Century"]
+    },
+    {
+      "summary": "Black Lives Matter Movement started",
+      "year": 2013,
+      "topic": ["United States", "21st Century"]
+    },
+    {
+      "summary": "Syrian Civil War started",
+      "year": 2011,
+      "topic": ["Syria", "21st Century"]
+    },
+    {
+      "summary": "Hong Kong Protests started",
+      "year": 2019,
+      "topic": ["Hong Kong", "21st Century"]
+    },
+    {
+      "summary": "Paris Agreement on Climate Change",
+      "year": 2015,
+      "topic": ["World", "21st Century"]
+    },
+    {
+      "summary": "US Capitol Attack",
+      "year": 2021,
+      "topic": ["United States", "21st Century"]
+    },
+    {
+      "summary": "Russian Annexation of Crimea",
+      "year": 2014,
+      "topic": ["Ukraine", "21st Century"]
+    }
+]
+
+}

@@ -1,0 +1,129 @@
+{"unit":"year",
+"array":[
+    {
+        "summary": "Taejo era started",
+        "value": 1392,
+        "topic": ["Joseon", "History", "King", "Korea" , "14 Century"]
+    },
+    {
+        "summary": "Jeongjong era started",
+        "value": 1398,
+        "topic": ["Joseon", "History", "King", "Korea" , "14 Century"]
+    },
+    {
+        "summary": "Taejong era started",
+        "value": 1400,
+        "topic": ["Joseon", "History", "King", "Korea"  , "15 Century"]
+    },
+    {
+        "summary": "Sejong the Great era started",
+        "value": 1418,
+        "topic": ["Joseon", "History", "King", "Korea"  , "15 Century"]
+    },
+    {
+        "summary": "Munjong era started",
+        "value": 1450,
+        "topic": ["Joseon", "History", "King", "Korea" , "15 Century" ]
+    },
+    {
+        "summary": "Danjong era started",
+        "value": 1452,
+        "topic": ["Joseon", "History", "King", "Korea" ,"15 Century" ]
+    },
+    {
+        "summary": "Sejo era started",
+        "value": 1455,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Yeonsangun era started",
+        "value": 1494,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Jungjong era started",
+        "value": 1506,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Injong era started",
+        "value": 1544,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Myeongjong era started",
+        "value": 1545,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Seonjo era started",
+        "value": 1567,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Gwanghaegun era started",
+        "value": 1608,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Injo era started",
+        "value": 1623,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Hyojong era started",
+        "value": 1649,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Hyeonjong era started",
+        "value": 1659,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Sukjong era started",
+        "value": 1674,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Gyeongjong era started",
+        "value": 1720,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Yeongjo era started",
+        "value": 1724,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Jeongjo era started",
+        "value": 1776,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Sunjo era started",
+        "value": 1800,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Heonjong era started",
+        "value": 1834,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Cheoljong era started",
+        "value": 1849,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Gojong era started",
+        "value": 1863,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    },
+    {
+        "summary": "Sunjong era started",
+        "value": 1907,
+        "topic": ["Joseon", "History", "King", "Korea"]
+    }
+]
+}

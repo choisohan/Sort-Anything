@@ -1,0 +1,9 @@
+:root{
+
+    --lightgray: rgb(238, 234, 229);
+    --failed-color: pink;
+    --text-color: rgb(45, 43, 42);
+    --point-color:rgb(157, 255, 0);
+
+    --highlight-color: rgb(235, 199, 150);
+}
