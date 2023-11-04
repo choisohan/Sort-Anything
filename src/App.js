@@ -27,8 +27,8 @@ const files = {
     {
     (!jsonDatas)?  null : <>
     
-    <Route path="/" element={ <Start keywords={jsonDatas.keywords}/>}/>
-    <Route path="/:paramID" element={<Quiz jsonDatas={jsonDatas} />}/>
+    <Route path="/sort-anything/" element={ <Start keywords={jsonDatas.keywords}/>}/>
+    <Route path="/sort-anything/:paramID" element={<Quiz jsonDatas={jsonDatas} />}/>
 
 
     </> 
