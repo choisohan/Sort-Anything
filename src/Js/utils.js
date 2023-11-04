@@ -4,7 +4,7 @@ export async function sortCSV(files){
 
   var items = []; //{unit:'', path:''}
   Object.keys(files).forEach( key =>{
-    items = items.concat(files[key].map( word => ({ unit: key , path: `/csv/${key}/${word}.csv`} )))
+    items = items.concat(files[key].map( word => ({ unit: key , path: `/sort-anything/csv/${key}/${word}.csv`} )))
   })
 
   var keywordArr = {};  
@@ -36,6 +36,7 @@ export async function sortCSV(files){
       }
     })
     var outData =  { keywords : SortObjectToArray(keywordArr , 5)  , datas : sortedObj} 
+    console.log( outData )
     return outData
   })
 
@@ -92,7 +93,6 @@ export function getRandomYearItem(_arr, count){
 
   var shuffledKeys = shuffleArray(Object.keys(myObj))
   shuffledKeys = shuffledKeys.slice(0, count);
-  console.log( shuffledKeys )
   return shuffledKeys.map( key=> myObj[key][0])
 
 }

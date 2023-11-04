@@ -32,9 +32,6 @@ export const TagSelector = props =>{
     props.setValue(props.value.filter(v => v!= item ))
   }
 
-  useEffect(()=>{
-    console.log( props.options)
-  }, [props.options] )
 
   return <div style={{display:'flex' , flexDirection:'column',gap:'5px'}}>
   <div className="TagSelector">{props.value.map( item =><span className='pill big on' style={{backgroundColor:'#'+item.color, borderColor:'#'+item.color, }} key={item.value} >
