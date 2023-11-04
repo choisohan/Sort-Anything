@@ -55,7 +55,7 @@ const WhatYearQuiz = props => {
        var headerHeight = headerRef.current.getBoundingClientRect().height
 
        const _zoom = (window.innerHeight - headerHeight )/centuryCount *.01;
-        setZoom(_zoom);
+        setZoom(_zoom*.8 );
         console.log(_zoom)
         setScore(false);
     }

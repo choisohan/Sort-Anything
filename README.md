@@ -2,4 +2,5 @@
 
 
 ## Helpful tools to make this
-- https://tableconvert.com/json-to-markdown
+- [Json-to-Markdown](https://tableconvert.com/json-to-markdown)
+- [React Gitpage publishing](https://github.com/gitname/react-gh-pages#8-configure-github-pages)

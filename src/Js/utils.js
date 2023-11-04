@@ -13,11 +13,15 @@ export async function sortCSV(files){
     var arr = await getCSVObject(item.path)    
 
     arr = arr.map( csvItem => {
-      var arr = (csvItem.keywords? csvItem.keywords.includes(',') ? csvItem.keywords.split(',').map(i=> i.trim()) : [csvItem.keywords.trim()]: []);
-      arr.forEach( a => {
-        if(a in keywordArr){ keywordArr[a].count += 1; } else{keywordArr[a] = {count: 1, unit : item.unit} }
+      var keywords = (csvItem.keywords? csvItem.keywords.includes(',') ? csvItem.keywords.split(',').map(i=> i.trim()) : [csvItem.keywords.trim()]: []);
+      keywords.forEach( a => {
+        if(a in keywordArr){
+          keywordArr[a].count += 1;
+        } else{
+          keywordArr[a] = {count: 1, unit : item.unit}
+        }
       })
-      return {...csvItem, value: parseFloat(csvItem.value), keywords : arr }
+      return {...csvItem, value: parseFloat(csvItem.value), keywords : keywords }
     })
     return {...item, array : arr}
   })
@@ -31,7 +35,8 @@ export async function sortCSV(files){
         sortedObj[item.unit] = item.array
       }
     })
-    return { keywords : SortObjectToArray(keywordArr , 5)  , datas : sortedObj} 
+    var outData =  { keywords : SortObjectToArray(keywordArr , 5)  , datas : sortedObj} 
+    return outData
   })
 
 }
