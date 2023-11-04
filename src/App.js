@@ -20,7 +20,10 @@ const files = {
     sortCSV(files).then( data => {setJsonDatas(data)})
   },[])
 
-  const footer = <div className='footer'>Created by <a href='https://github.com/choisohan'>Choi Sohan</a></div>
+  const footer = <div className='footer'>
+    Created by <a href='https://github.com/choisohan' target="_blank" >Choi Sohan</a>
+    </div>
+    
   return (
     <BrowserRouter>
   <Routes>

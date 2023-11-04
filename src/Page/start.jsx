@@ -15,8 +15,8 @@ const Start = props =>{
 
     useEffect(()=>{
         var _options = props.keywords.map( (item , index ) =>{ return {...item,  color: colorArr[index]}})
-        setOptions(_options)
-        setSelected([_options[Math.floor(_options.length * Math.random())]]);
+        setOptions(_options || [])
+        setSelected( _options.length > 0 ?  [_options[Math.floor(_options.length * Math.random())]] : [] );
     },[ props.keywords ])
 
     useEffect(()=>{
