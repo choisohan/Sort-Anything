@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Sort-Anything/static/css/main.0a9bab6f.css",
-    "main.js": "/Sort-Anything/static/js/main.4c081e21.js",
-    "static/js/787.c80ed10e.chunk.js": "/Sort-Anything/static/js/787.c80ed10e.chunk.js",
-    "index.html": "/Sort-Anything/index.html",
-    "main.0a9bab6f.css.map": "/Sort-Anything/static/css/main.0a9bab6f.css.map",
-    "main.4c081e21.js.map": "/Sort-Anything/static/js/main.4c081e21.js.map",
-    "787.c80ed10e.chunk.js.map": "/Sort-Anything/static/js/787.c80ed10e.chunk.js.map"
+    "main.css": "/sort-anything/static/css/main.0a9bab6f.css",
+    "main.js": "/sort-anything/static/js/main.0bb1f7c5.js",
+    "static/js/787.c80ed10e.chunk.js": "/sort-anything/static/js/787.c80ed10e.chunk.js",
+    "index.html": "/sort-anything/index.html",
+    "main.0a9bab6f.css.map": "/sort-anything/static/css/main.0a9bab6f.css.map",
+    "main.0bb1f7c5.js.map": "/sort-anything/static/js/main.0bb1f7c5.js.map",
+    "787.c80ed10e.chunk.js.map": "/sort-anything/static/js/787.c80ed10e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a9bab6f.css",
-    "static/js/main.4c081e21.js"
+    "static/js/main.0bb1f7c5.js"
   ]
 }
