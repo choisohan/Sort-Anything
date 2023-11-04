@@ -1,37 +1,59 @@
+import * as Papa from 'papaparse'
 
-export async function getCSVObject(_path){
-    return  fetch(_path)
-        .then(response => response.text())
-        .then( text => csvToJSON(text) )
+export async function sortCSV(files){
+
+  var items = []; //{unit:'', path:''}
+  Object.keys(files).forEach( key =>{
+    items = items.concat(files[key].map( word => ({ unit: key , path: `/csv/${key}/${word}.csv`} )))
+  })
+
+  var keywordArr = {};  
+
+  const promises = items.map( async item =>{
+    var arr = await getCSVObject(item.path)    
+
+    arr = arr.map( csvItem => {
+      var arr = (csvItem.keywords? csvItem.keywords.includes(',') ? csvItem.keywords.split(',').map(i=> i.trim()) : [csvItem.keywords.trim()]: []);
+      arr.forEach( a => {
+        if(a in keywordArr){ keywordArr[a].count += 1; } else{keywordArr[a] = {count: 1, unit : item.unit} }
+      })
+      return {...csvItem, value: parseFloat(csvItem.value), keywords : arr }
+    })
+    return {...item, array : arr}
+  })
+
+  return await Promise.all(promises).then( dataArray =>{
+    var sortedObj = {};
+    dataArray.forEach( item => {
+      if(item.unit in sortedObj){
+        sortedObj[item.unit] =[...sortedObj[item.unit],...item.array]
+      }else{
+        sortedObj[item.unit] = item.array
+      }
+    })
+    return { keywords : SortObjectToArray(keywordArr , 5)  , datas : sortedObj} 
+  })
+
 }
 
+function SortObjectToArray  ( obj , maxCount ) {
+  const sorted = Object.keys(obj).map( key => ({value : key, ...obj[key]})).filter( item => item.count > maxCount )
+  sorted.sort( (a, b) => b.count - a.count )
+  return sorted 
+}
 
-function csvToJSON(csvText) {
-    // Split the CSV text into an array of lines
-    const lines = csvText.split('\n');
-    
-    // Get the column headers (first line)
-    const headers = lines[0].split(',');
-    
-    // Initialize an array to store the JSON objects
-    const jsonArray = [];
-    
-    // Loop through the lines (starting from the second line)
-    for (let i = 1; i < lines.length; i++) {
-      const currentLine = lines[i].split(',');
-      const jsonObject = {};
-      
-      // Loop through the columns
-      for (let j = 0; j < headers.length; j++) {
-        // Use the header as the key and the current line's value as the value
-        jsonObject[headers[j].trim().toLowerCase()] = currentLine[j];
-      }
-      
-      jsonArray.push(jsonObject);
-    }
-    
-    return jsonArray;
-  }
+export async function getCSVObject(_path){
+  return await fetch(_path)
+    .then( async response => {
+      const reader = response.body.getReader()
+      const result = await reader.read() // raw array
+      const decoder = new TextDecoder('utf-8')
+      const csv = decoder.decode(result.value) // the csv text
+      const results = Papa.parse(csv, { header: true }) // object with { data, errors, meta }
+      return results.data; 
+    })
+}
+
   
 export function getRandomItemsFromArray(array, numItems) {
   var arr = [];

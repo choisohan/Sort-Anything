@@ -1,7 +1,8 @@
+import { useState } from "react"
 
 
 const Timeline = props =>{   
-
+    const [style,setStyle] = useState({})//{ transform: `translateY( -${( (props.yearRange.start* props.zoom) % 100  ) }px)` }
 
     
     if(props.yearRange){
@@ -11,7 +12,7 @@ const Timeline = props =>{
     <div className="stripe fullWidth"> 
 
         <div style={{overflow:'hidden'}}>
-            <div className='centry-container' style={ { transform: `translateY( -${( (props.yearRange.start* props.zoom) % 100  ) }px)` }}> 
+            <div className='centry-container' style={style}> 
                     {
                 Array.from({ length: Math.floor(props.yearRange.end - props.yearRange.start)/100 }, (_, i) => (
                     <div className='century' key={i} numb={  Math.floor(props.yearRange.start / 100) + i   }
@@ -22,8 +23,7 @@ const Timeline = props =>{
         </div>
     </div>
 
-    <div className="children" style={ { transform: `translateY(-${( (props.yearRange.start* props.zoom) % 100  ) }px)` }} >
-        {props.children}
+    <div className="children" style={style}>  {props.children}
     </div>
 
 </div>

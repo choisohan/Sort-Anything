@@ -92,7 +92,7 @@ code {
 .centry-container{
   text-align: -webkit-center;
   width:100%;
-  transform: translateY( var(--start-year) +'px' );
+  /* transform: translateY( var(--start-year) +'px' ); */ 
 }
 .Timeline{
   position: relative;
@@ -255,6 +255,7 @@ button button{
 }
 .center{
   justify-content: center;
+  text-align: -webkit-center;
 }
 .historic-event.failed{
   background-color: var(--failed-color);
@@ -382,7 +383,6 @@ h5{
   height:100%;
   align-self: center;
   gap:10px;
-  padding-right:100px;
   max-width: 500px;
 }
 
@@ -412,13 +412,21 @@ h1{
   /* background-color: var(--lightgray); */ 
 }
 
-
+a{
+  color: var(--text-color);
+}
+a:hover{
+  text-decoration: none;
+  font-weight: 600px;
+}
 
 .content-body{
   width: -webkit-fill-available; 
   display: flex;
   justify-content: center;
   flex-grow: 1;
+  flex-wrap: wrap; 
+  max-width: 900px;
 }
 
 
@@ -513,4 +521,20 @@ li{
   width:100%;
   padding: 80px 0px; 
   font-size: 80%;
+}
+
+.title{
+  pointer-events: none;
+  width: fit-content;
+  position: relative;
+}
+
+.subtitle{
+  position:absolute;
+  transform:translateY(10px) rotate(5deg);
+  right:0px; 
+  background-color: var(--text-color);
+  color: var(--lightgray);
+  padding: 2px 4px; 
+  font-size: 85%;
 }

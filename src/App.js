@@ -3,47 +3,31 @@ import { Route ,Routes ,BrowserRouter } from 'react-router-dom';
 import Start from './Page/start';
 import { useEffect, useState } from 'react';
 import Quiz from './Page/quiz';
-
+import { getCSVObject , sortCSV } from './Js/utils';
 var jsonFiles = ['Countries-Rise and Fall', 'Inventions' ,'US-presidents','WorldPopulation2022' ,"Art" , 'Contemporary era', 'KoreaHistory']
 
+const files = {
+  "year" : ["country", "inventions", "history" , "korea", "organizations", "usa"  ],
+  "population" : ["world2022"]
+}
 
 
-function App() {
+  function App() {
 
   const [jsonDatas, setJsonDatas] = useState();
 
-
   useEffect(()=>{
-    Promise.all( jsonFiles.map( fName =>
-      Promise.resolve(
-          fetch(`/json/${fName}.json`).then(async data=> await data.json()) )) )
-            .then( JSONDatas =>{
-              //var arr = [];
-              var data = {}
-              var tags = []; 
-              JSONDatas.forEach( JSONData => {
-                if(JSONData.unit in data){
-                  data[JSONData.unit] =[...data[JSONData.unit] , ...JSONData.array]
-                }else{
-                  data[JSONData.unit] = JSONData.array;
-                }
-                var JSONTags = JSONData.array.map( item => item.topic )
-                tags = [...tags, ...JSONTags[0].map(t=>( { value: t ,label: t , unit: JSONData.unit} ) ) ]
-
-            })
-      setJsonDatas({units: data , tags: tags}); 
-      console.log( data , tags )
-    })
+    sortCSV(files).then( data => {setJsonDatas(data)})
   },[])
 
-  const footer = <div className='footer'>Created by Choi Sohan</div>
+  const footer = <div className='footer'>Created by <a href='https://github.com/choisohan'>Choi Sohan</a></div>
   return (
     <BrowserRouter>
   <Routes>
     {
     (!jsonDatas)?  null : <>
     
-    <Route path="/" element={ <Start tags={jsonDatas.tags}/>}/>
+    <Route path="/" element={ <Start keywords={jsonDatas.keywords}/>}/>
     <Route path="/:paramID" element={<Quiz jsonDatas={jsonDatas} />}/>
 
 

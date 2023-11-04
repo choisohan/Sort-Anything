@@ -54,7 +54,6 @@ const OrderedByScore = props =>{
 <h2>Your Score is {result}.</h2>
 <div>
 
-    <button className="shadow">Share</button>
     <button className="shadow" onClick={props.onPlayAgain}>Play Again</button>
 
 </div>

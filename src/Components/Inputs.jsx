@@ -38,7 +38,7 @@ export const TagSelector = props =>{
 
   return <div style={{display:'flex' , flexDirection:'column',gap:'5px'}}>
   <div className="TagSelector">{props.value.map( item =><span className='pill big on' style={{backgroundColor:'#'+item.color, borderColor:'#'+item.color, }} key={item.value} >
-        {item.label}<button id='x-button' className="square" label='remove' onClick={()=>{onRemove(item)}}>X</button></span>)}
+        {item.value}<button id='x-button' className="square" label='remove' onClick={()=>{onRemove(item)}}>X</button></span>)}
 
 { props.value.length > 0 ? <button className="shadow" onClick={_=>{props.setValue([])}}>Clear</button> : null }
       
@@ -47,7 +47,7 @@ export const TagSelector = props =>{
         .map( item=>
             <span key={item.value} className={ "pill " + (!props.mode ? '' : props.mode != item.unit ? 'disabled' :'')} onClick={()=>{onAdd(item)}}
               style={{borderColor:'#'+item.color , color: '#'+item.color }}
-            >{item.label}</span>)}
+            >{item.value}</span>)}
     </div>
   </div>
 }

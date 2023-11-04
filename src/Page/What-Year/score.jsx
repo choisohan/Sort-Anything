@@ -62,7 +62,6 @@ const WhatYearScore = props => {
 
 <div>
 
-<button className="shadow">Share</button>
 <button className="shadow" onClick={props.onPlayAgain}>Play Again</button>
 
 </div>

@@ -3,7 +3,7 @@ import { getRandomColor, shuffleArray } from "../../Js/utils";
 import Draggable from "../../Components/DraggableCanvas2";
 import { useState, useEffect, useRef } from "react";
 import OrderedByScore from "./score";
-
+import { Title } from "../../Components/UIComponents";
 const OrderByQuiz = props=>{
     const [ searchParams ]= useSearchParams();
     const [ quizArr, setQuizArr ] = useState([]);
@@ -20,11 +20,11 @@ const OrderByQuiz = props=>{
 
     const getQuiz = ()=>{
 
-        var topics = searchParams.get('topics').split(',').map( t=> t.trim().toLowerCase()) 
+        var tags = searchParams.get('tags').split(',').map( t=> t.trim().toLowerCase()) 
         var count = parseInt(searchParams.get('count')) || 4 
  
-        var arr = props.jsonDatas.units[props.unit].filter(item=> {
-            return  item.topic.some(word => topics.includes(word.trim().toLowerCase()))})
+        var arr = props.jsonDatas.datas[props.unit].filter(item=> {
+            return  item.keywords.some(word => tags.includes(word.trim().toLowerCase()))})
         arr = shuffleArray(arr).map( item => ({...item, color: getRandomColor()})).slice(0,count)
 
         var headerHeight = headerRef.current.getBoundingClientRect().height
@@ -45,11 +45,8 @@ const OrderByQuiz = props=>{
     }
 
     return <>
-    <div ref={headerRef}>
-        <span style={{position:'absolute', width: '-webkit-fill-available', transform:'translateY(10px)'}}>Ascending order by <span id="mode-tag">{props.unit}</span></span>
+    <Title unit={props.unit} ref={headerRef} />
 
-        <h1 >Sort Anything</h1>
-    </div>
 
     <div className="content-body">
         <div className="quizes order-by">
