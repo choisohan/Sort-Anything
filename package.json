@@ -2,6 +2,7 @@
   "name": "what-year-quiz",
   "version": "0.1.0",
   "private": true,
+ "homepage": "https://choisohan.github.io/Sort-Anything",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
