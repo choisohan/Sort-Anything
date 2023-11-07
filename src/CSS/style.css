@@ -64,6 +64,10 @@ code {
   pointer-events: none;
   width: 100px; 
   position: relative;
+  background-image:  repeating-linear-gradient(var(--stripe-color),
+  var(--stripe-color)  10px,
+  white 10px,
+  white 20px);
 }
 #x-button{
   justify-content: center;
@@ -92,6 +96,7 @@ code {
 .centry-container{
   text-align: -webkit-center;
   width:100%;
+  
   /* transform: translateY( var(--start-year) +'px' ); */ 
 }
 .Timeline{
@@ -177,6 +182,8 @@ button button{
   cursor: pointer; 
   display: flex;
   flex-direction: column;
+  max-width: 250px;
+  word-break : initial ;
 
 }
 .historic-event img{
@@ -201,16 +208,26 @@ button button{
   z-index: 2;
   outline: 2px solid var( --highlight-color) !important;
 }
-.historic-event:hover::after{
-  content:attr(year)'?';
+
+.year-answer{
   position: absolute;
   top:0px;
   left:0px;
   transform: translateY(-100%);
-  color: black;
   font-size: 200%;
   font-weight: bold;
   word-break: keep-all;
+  display: none;
+  white-space: nowrap;
+
+}
+.red{
+  color: red;
+  text-decoration: line-through;
+}
+
+.historic-event:hover .year-answer{
+  display: inline;
 }
 
 .historic-event.left{
@@ -258,7 +275,12 @@ button button{
   text-align: -webkit-center;
 }
 .historic-event.failed{
-  background-color: var(--failed-color);
+  background-color: black;
+}
+.historic-event.failed label{
+  color:rgb(255, 130, 151); 
+  mix-blend-mode: difference;
+  font-weight: bold;
 }
 
 h1{
@@ -372,10 +394,9 @@ h5{
 .quizes{
   width:100%
 }
-/*
 .quiz-item:has(.historic-event:hover) .correction-range-bar{
-  opacity: 1;
-}*/
+  opacity: 1 !important;
+}
 
 #score-page{
   display: flex;
@@ -487,7 +508,6 @@ a:hover{
   margin-top: 10px;
 }
 .quiz-item:hover{
-  outline: 2px solid var(--text-color)
 }
 
 #mode-tag{

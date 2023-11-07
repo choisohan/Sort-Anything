@@ -24,7 +24,8 @@ const OrderByQuiz = props=>{
         var count = parseInt(searchParams.get('count')) || 4 
  
         var arr = props.jsonDatas.datas[props.unit].filter(item=> {
-            return  item.keywords.some(word => tags.includes(word.trim().toLowerCase()))})
+            return tags.every(itemA => item.keywords.map(t => t.trim().toLowerCase()).includes(itemA)  );
+        })
         arr = shuffleArray(arr).map( item => ({...item, color: getRandomColor()})).slice(0,count)
 
         var headerHeight = headerRef.current.getBoundingClientRect().height

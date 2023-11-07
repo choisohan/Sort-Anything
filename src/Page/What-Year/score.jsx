@@ -11,10 +11,10 @@ const WhatYearScore = props => {
         if(result >= 100 ){
             className += 'best-'
         }
-        else if( result >= 50 && result < 100){
+        else if( result >= 80 && result < 100){
             className += 'good-'
         }
-        else if(result > 0 ){
+        else if(result > 40 ){
             className += 'ehh-'
         }else{
             className += 'failed-'
@@ -27,38 +27,32 @@ const WhatYearScore = props => {
     }
     useEffect(()=>{
         var textArr = [];
-        var _result = 100;//props.quizArr.length * 100; 
-
-        props.quizArr.forEach(item => {
+        var _result = 0;//props.quizArr.length * 100; 
+        var quizArr = [...props.quizArr];
+        var scores = []; 
+        for(var i = 0 ; i < quizArr.length; i ++ ){
             const arr = [];
-            var diffYear = Math.abs(item.yearAnswered - item.year);
-
-            if(diffYear==0){
-                arr.push(<> Perfect match. <b>+100</b> </>);
-                _result+= 100;
-
-            }else if(diffYear < 5){
-                arr.push(<>Very Close Bonus. <b> +${20-diffYear}`</b> </>);
-                _result += 20- diffYear
+            var diffYear = Math.abs(quizArr[i].yearAnswered - quizArr[i].year);
+            var yearLength = props.yearRange.end- props.yearRange.start;
+            var accuracy = 1 - (diffYear/yearLength);
+            if(accuracy > .7){
+                arr.push(<><b>{(accuracy*100).toFixed(0)}%</b></>);
+            }else{
+                arr.push(<><i>{(accuracy*100).toFixed(0)}%</i></>);
             }
-            else if(diffYear < 10){
-                arr.push( <>Close Bonus. <b>+${10-diffYear}</b></>);
-                _result += 10 - diffYear; 
-            }
-            else{
-                arr.push(<><i>-${diffYear}</i></>);
-                _result -= diffYear; 
-            }
+            scores.push(accuracy);
+            _result+= accuracy*100; 
             textArr.push(arr)
-        });
+        }
         setTexts(textArr)
-        setResult(_result)
+        setResult( _result/quizArr.length )
+        props.onQuizArrFeedback(scores);
     },[props.quizArr])
 
 
     return <div id='score-page'>
 {resultImage()}
-<h2>Your Score is {result}.</h2>
+<h2>Your Accuracy : {result}%</h2>
 
 <div>
 

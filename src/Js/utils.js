@@ -4,7 +4,7 @@ export async function sortCSV(files){
 
   var items = []; //{unit:'', path:''}
   Object.keys(files).forEach( key =>{
-    items = items.concat(files[key].map( word => ({ unit: key , path: `/sort-anything/csv/${key}/${word}.csv`} )))
+    items = items.concat(files[key].map( word => ({ unit: key , path: `/that-time/csv/${key}/${word}.csv`} )))
   })
 
   var keywordArr = {};  
