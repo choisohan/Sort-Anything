@@ -1,30 +1,46 @@
-summary,value,keywords
-World War I,1914,"World,20th Century"
-Russian Revolution,1917,"Russia,20th Century"
-Great Depression,1929,"United States,20th Century"
-Spanish Civil War,1936,"Spain,20th Century"
-World War II,1939,"World,20th Century"
-The Holocaust,1941,"Europe,20th Century"
-Korean War,1950,"Korea,20th Century"
-Civil Rights Movement started,1954,"United States,20th Century"
-Vietnam War,1955,"Vietnam,20th Century"
-Cuban Missile Crisis,1962,"United States,20th Century"
-Chinese Cultural Revolution,1966,"China,20th Century"
-The Moon Landing,1969,"United States,20th Century"
-Chernobyl Disaster,1986,"Ukraine,20th Century"
-Fall of the Berlin Wall,1989,"Germany,20th Century"
-Fall of the Soviet Union,1991,"Russia,20th Century"
-European Union Formation,1993,"Europe,20th Century"
-Rwandan Genocide,1994,"Rwanda,20th Century"
-9/11 Attacks,2001,"United States,21st Century"
-Afghanistan War,2001,"Afghanistan,21st Century"
-Arab Spring started,2010,"Middle East,21st Century"
-Fukushima Nuclear Disaster,2011,"Japan,21st Century"
-Syrian Civil War started,2011,"Syria,21st Century"
-Black Lives Matter Movement started,2013,"United States,21st Century"
-Russian Annexation of Crimea,2014,"Ukraine,21st Century"
-Paris Agreement on Climate Change,2015,"World,21st Century"
-Brexit,2016,"United Kingdom,21st Century"
-COVID-19 Pandemic,2019,"World,21st Century"
-Hong Kong Protests started,2019,"Hong Kong,21st Century"
-US Capitol Attack,2021,"United States,21st Century"
+summary,value,keywords,description,image
+World War I started,1914,"World,20th Century , war, europe","Austria-Hungary declares war on Serbia, beginning World War I.
+",https://assets.editorial.aetnd.com/uploads/2009/10/world-war-one-gettyimages-90007631.jpg
+Russian Revolution,1917,"Russia,20th Century", Revolution that overthrew the imperial government and placed the Bolsheviks in power,https://cdn.britannica.com/78/121178-050-95767572/crowd-Vladimir-Ilyich-Lenin-Russian-Revolution-1917.jpg
+World War I ended,1918,"World,20th Century , war, europe",Germany surrendered because they were unable to sustain the way much longer,https://ichef.bbci.co.uk/images/ic/1200xn/p06lrrvl.jpg
+Spanish flu,1918,"Europe, 20th Century",,https://ychef.files.bbci.co.uk/1280x720/p085dl5h.jpg
+Women gaining the right to vote in US,1920,"20th Century ,United States",,https://cdn.jwa.org/sites/default/files/styles/scale_width_640px/public/mediaobjects/women_voter_outreach_1935_english_yiddish.jpg?itok=XXUS_vjt
+ Vladimir Lenin's Death,1924,"Soviet Union, 20th Century , Communism","Vladimir Ilyich Ulyanov, better known as Vladimir Lenin, was a Russian revolutionary, politician, and political theorist. He served as the first and founding head of government of Soviet Russi",https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Vladimir_Lenin.jpg/1200px-Vladimir_Lenin.jpg
+Great Depression,1929,"United States,20th Century",The collapse of world trade due to the Smoot-Hawley Tariff; government policies; bank failures and panics; and the collapse of the money supply,https://assets.editorial.aetnd.com/uploads/2009/10/great-depression-history-gettyimages-80752394.jpg
+Spanish Civil War,1936,"Spain,20th Century, war"," military revolt against the Republican government of Spain, supported by conservative elements within the country",https://cdn.britannica.com/85/134685-050-434E6EE2/Francisco-Franco-troops-Barcelona-Spanish-Civil-War.jpg
+World War II started,1939,"World,20th Century, war","Nazi Germany and Imperial Japan unleashed World War II with the intention of establishing, by military conquest, a permanent dominance over Europe and Asia respectively.",https://assets.editorial.aetnd.com/uploads/2009/10/adolf-hitler-gettyimages-119505258.jpg
+Vietnam Independence from France,1945,"Vietnam ,20th Century","Ho Chi Minh, leader of the Viet Minh, declares independence from French colonial rule as he announces the formation of the Democratic Republic of Vietnam.",https://alphahistory.com/vietnamwar/wp-content/uploads/2012/06/ho1945.jpg
+Atomic bombings in Japan,1945,"World, Japan, 20th Century, war",the United States detonated two atomic bombs over the Japanese cities of Hiroshima and Nagasaki respectively.,https://upload.wikimedia.org/wikipedia/commons/5/54/Atomic_bombing_of_Japan.jpg
+Korean War,1950,"Korea,20th Century , war ",North Korea aimed to militarily conquer South Korea and therefore unify Korea under the communist North Korean regime,https://www.pbs.org/wgbh/americanexperience/media/filer_public_thumbnails/filer_public/cb/4c/cb4cfe5b-ece9-4c65-a8fa-f3f08f0ef623/superbomb-korean-war-loc.jpg__1000x724_q85_crop_subsampling-2.jpg
+Civil Rights Movement started,1954,"United States,20th Century","The U.S. Supreme Court ruled unanimously that “separate educational facilities are inherently unequal,” legally ending racial segregation in public schools and overruling the “separate but equal” principle set forth in Plessy v. Ferguson in 1889.",https://upload.wikimedia.org/wikipedia/commons/4/4c/Civil_Rights_March_on_Washington%2C_D.C._%28Leaders_marching_from_the_Washington_Monument_to_the_Lincoln_Memorial%29_-_NARA_-_542010.jpg
+Vietnam War started,1955,"Vietnam,20th Century war","The United States entered Vietnam with the principal purpose of preventing a communist takeover of the region. In that respect, it failed:",https://api.time.com/wp-content/uploads/2015/04/vietnam_iconic004.jpg
+Cuban Missile Crisis,1962,"United States,20th Century","also known as the October Crisis in Cuba, or the Missile Scare, was a 13-day confrontation between the United States and the Soviet Union, when American deployments of nuclear missiles in Italy and Turkey were matched by Soviet deployments of nuclear missiles in Cuba.",https://world.time.com/wp-content/uploads/sites/17/2012/10/001079.jpg?w=720
+The assassination of President Kennedy,1963,"United States,20th Century",,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/JFK_limousine.png/1200px-JFK_limousine.png
+Chinese Cultural Revolution,1966,"China,20th Century","Formally known as the Great Proletarian Cultural Revolution, was a sociopolitical movement in the People's Republic of China launched by Mao Zedong",https://cdn.britannica.com/25/91425-050-150341F7/Mao-Zedong-troops-Tiananmen-Square-Beijing-August-1966.jpg
+The Moon Landing,1969,"United States,20th Century",Astronauts Neil Armstrong and Edwin “Buzz” Aldrin became the first men to walk on the moon after reaching the surface in their Apollo 11 lunar module.,https://i.natgeofe.com/k/1ef0d42f-adf7-49e7-a2de-7d381fd18f95/moon-landing-textimage_4x3.png
+Vietnam War ended,1975,"Vietnam,20th Century war",,
+Chernobyl Disaster,1986,"Ukraine,20th Century, disaster",,https://upload.wikimedia.org/wikipedia/commons/8/87/IAEA_02790015_%285613115146%29.jpg
+Fall of the Berlin Wall,1989,"Germany,20th Century",five days after half a million people gathered in East Berlin in a mass protest,https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg
+Persian Gulf War,1990,"Iraq, war, 20th Century", international conflict that was triggered by Iraq's invasion of Kuwait,
+Fall of the Soviet Union,1991,"Russia,20th Century",Gorbachev's decision to allow elections with a multi-party system and create a presidency for the Soviet Union began a slow process of democratization that eventually destabilized Communist control and contributed to the collapse of the Soviet Union.,https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2NvbW11bmlzbS0xNC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==
+European Union(EU) Formation,1993,"Europe,20th Century, Organization",,
+Rwandan Genocide,1994,"Rwanda,20th Century , Genocide","The genocide against the Tutsi erupted in Rwanda, with neighbors turning on neighbors and family turning on family. Over 800,000 people — up to 1 million on some accounts — were brutally slaughtered in just 100 days, leaving the once-beautiful country in ruins.",https://static01.nyt.com/images/2019/04/06/world/06rwanda-photos1/merlin_153092277_35d121c3-970e-401f-be1b-6bbfac8119a3-superJumbo.jpg
+Handover of Hong Kong,1997,"China,20th Century , UK",This event ended 156 years of British rule in the former colony.,
+9/11 Attacks,2001,"United States,21st Century, Terror",four coordinated Islamist suicide terrorist attacks carried out by al-Qaeda against the United States in 2001,https://cdn.britannica.com/33/129733-050-AF95D301/Smoke-flames-twin-towers-attacks-World-Trade-September-11-2001.jpg
+Afghanistan War started,2001,"Afghanistan,21st Century , war, United States,", U.S. and allied forces invaded the country and quickly ousted the Taliban regime following its refusal to hand over terrorist leader Osama bin Laden in the wake of al-Qaeda's 9/11 attacks.,https://www.telegraph.co.uk/content/dam/news/2021/07/01/0-lead-sq.jpg?imwidth=350
+Pluto became a dwarf planet,2006,"21th Century , Science","the International Astronomical Union (IAU) downgraded the status of Pluto to that of ""dwarf planet."" This means that from now on only the rocky worlds of the inner Solar System and the gas giants of the outer system will be designated as planets.",https://earthsky.org/upl/2015/07/pluto-heart-enhanced-e1471862884689.jpg
+Arab Spring started,2010,"Middle East,21st Century",wave of pro-democracy protests and uprisings that took place in the Middle East and North Africa,https://assets.editorial.aetnd.com/uploads/2018/01/arab-spring-gettyimages-108994884.jpg
+Osama bin Laden died,2011,"United States,21st Century, Terror","The founder and first leader of the Islamist militant group al-Qaeda, was shot and killed at his compound in the Pakistani city of Abbottabad by United States Navy SEALs of SEAL Team Six (",
+Fukushima Nuclear Disaster,2011,"Japan,21st Century",,https://polarjournal.ch/wp-content/uploads/2021/12/Fukushima-Explosion.jpg
+Syrian Civil War started,2011,"Syria,21st Century","Many Syrians were complaining about high unemployment, corruption and a lack of political freedom under President Bashar al-Assad, who succeeded his father, Hafez",https://ichef.bbci.co.uk/news/2048/cpsprodpb/EF63/production/_105738216_mediaitem88772680.jpg
+Black Lives Matter Movement started,2013,"United States,21st Century",,https://cdn.britannica.com/70/217070-050-250699A2/Black-Lives-Matter-protest-signs-Boston-Massachusetts-May-2020.jpg
+Russian Annexation of Crimea,2014,"Ukraine,21st Century","Russia invaded the Crimean Peninsula, part of Ukraine, and then annexed it. ",
+Paris Agreement on Climate Change,2015,"World,21st Century",,https://blogs.ei.columbia.edu/wp-content/uploads/2015/12/Adoption-637x424.jpg
+UK European Union membership referendum,2016,"United Kingdom,21st Century",,
+COVID-19 Pandemic,2019,"World,21st Century",,https://dims.apnews.com/dims4/default/90e4713/2147483647/strip/true/crop/3000x2171+0+0/resize/599x433!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fafs-prod%2Fmedia%2F1f90006893b3470c9a0834f731feaa55%2F3000.jpeg
+Hong Kong Protests started,2019,"Hong Kong,21st Century",A series of demonstrations against the Hong Kong government's introduction of a bill to amend the Fugitive Offenders Ordinance in regard to extradition.,"https://media.cnn.com/api/v1/images/stellar/prod/141126155032-defining-moments-hong-kong-protest.jpg?q=w_2164,h_1443,x_0,y_0,c_fill"
+Murder of George Floyd,2020,"21st Century , United States","George Perry Floyd Jr. was an African-American man who was murdered by a police officer in Minneapolis, Minnesota, during an arrest made after a store clerk suspected Floyd may have used a counterfeit twenty-dollar bill",https://e0.365dm.com/20/06/1600x900/skysports-george-floyd-black-lives-matter_5009291.jpg?20200609081434
+US Capitol Attack,2021,"United States,21st Century"," two months after the defeat of U.S. president Donald Trump in the presidential election, a mob of his supporters attacked the United States Capitol Building in Washington, D.C",https://i.guim.co.uk/img/media/b5e6c314893079187669905eceecd9a4a427c476/0_200_6000_3600/master/6000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=5ec6e5eff355b1b9756c26222696bda8
+Afghanistan War ended,2021,"United States,Afghanistan,21st Century , war",,
+Russian invasion of Ukraine,2022,"Russia,Ukraine, 21th Century",,https://ipripak.org/wp-content/uploads/2016/01/74684864_independencesq_reu.jpg
+Israel–Hamas war,2023,"Islael, 21th Century , war",An armed conflict broke out between Israel and Hamas-led Palestinian militants from the Gaza Strip after the latter launched a multi-pronged invasion of southern Israel.,https://www.livemint.com/lm-img/img/2023/11/06/600x338/ISRAEL-PALESTINIAN-CONFLICT-0_1699232289927_1699232307099.jpg
