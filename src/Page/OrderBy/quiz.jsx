@@ -68,7 +68,7 @@ const OrderByQuiz = props=>{
         </div>
 
         {score ? <OrderedByScore quizArr={quizArr} onPlayAgain={()=>{getQuiz()}}/> :
-        <button className='shadow big fixed bottom right' onClick={()=>{setScore(true)}} >Get Score</button> }
+        <button className='shadow big fixed bottom right' onClick={()=>{setScore(true)}} style={{right: '2%'}}>Get Score</button> }
 
 
     </div>

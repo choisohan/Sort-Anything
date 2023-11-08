@@ -313,8 +313,8 @@ h5{
 .left{
   left:0px
 }
-.right{
-  right:0px;
+.fixed.right , .absolute.right{
+  right:0% ;
 }
 .pill button{
   background-color: transparent;
