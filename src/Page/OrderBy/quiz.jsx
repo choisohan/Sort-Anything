@@ -20,11 +20,14 @@ const OrderByQuiz = props=>{
 
     const getQuiz = ()=>{
 
-        var tags = searchParams.get('tags').split(',').map( t=> t.trim().toLowerCase()) 
+        var tags = searchParams.get('tags').split(',').map( t=> t.replace('-',' '))
+        var centuryTags = tags.filter(t => t.includes('century') )
+        tags = tags.filter(t => !t.includes('century') )
+
         var count = parseInt(searchParams.get('count')) || 4 
  
         var arr = props.jsonDatas.datas[props.unit].filter(item=> {
-            return tags.every(itemA => item.keywords.map(t => t.trim().toLowerCase()).includes(itemA)  );
+            return tags.every(tag => item.keywords.map(t => t.trim().toLowerCase()).includes(tag)  )
         })
         arr = shuffleArray(arr).map( item => ({...item, color: getRandomColor()})).slice(0,count)
 

@@ -35,7 +35,8 @@ const Start = props =>{
     <div className="flex column center" style={{gap:'20px'}}>
         <NumberInput value={count} setValue={setCount} range={{min:1, max: 8}}/>
         <TagSelector options={ options } mode={mode} value={selected} setValue={setSelected} />
-        {selected.length == 0 ? null : <Link to={`/that-time/${mode}?tags=${selected.map(t=>t.value)}&count=${count}`} ><button className="big shadow"> Start </button> </Link>
+        {selected.length == 0 ? null : <Link to={`/that-timeline/${mode}?tags=${selected.map(t=>t.value.replace(' ','-').toLowerCase().trim())}&count=${count}`} >
+            <button className="big shadow"> Start </button> </Link>
 }
     </div>
 

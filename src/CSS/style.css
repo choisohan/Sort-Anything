@@ -57,7 +57,10 @@ code {
 }
 
 
-
+.century:last-child{
+  overflow: hidden;
+  height:50%;
+}
 
 .century{
   background-color:white;
@@ -69,6 +72,7 @@ code {
   white 10px,
   white 20px);
 }
+
 #x-button{
   justify-content: center;
   width:20px;
@@ -188,18 +192,20 @@ button button{
 }
 .historic-event img{
   max-width:100px;
-  max-height: 100px;  
+  user-select: none;
 }
-.historic-event img:hover{
+.historic-event:hover img{
   max-width:250px;
-  max-height: 250px;  
 }
 .historic-event label{
   color: white;
   cursor: pointer; 
-
+  text-align:center;
+  width:max-content;
+  max-width: 200px;;
 
 }
+
 .square{
   aspect-ratio: 1/1;
   justify-content: center;
@@ -285,6 +291,8 @@ button button{
 
 h1{
   font-size: 75px;
+  word-break:keep-all;
+  line-height: 80%;
 }
 h2{
   font-size: 44px;
@@ -320,13 +328,16 @@ h5{
   position: fixed;
 }
 .top{
-  top:10px;
+  top:0px;
 }
 .bottom{
-  bottom: 10px;
+  bottom: 0px;
 }
 .right{
-  right: 10px;
+  right: 0px;
+}
+.margin{
+  margin:10px;
 }
 
 #zoom-slider{
@@ -374,7 +385,8 @@ h5{
 }
 .correction-range-bar *:nth-child(3){
   opacity: 1;
- background-color: rgb(0, 149, 255);
+  background-color: rgb(0, 149, 255);
+  height:4px;
 }
 
 .fullWidth{
@@ -557,4 +569,10 @@ li{
   color: var(--lightgray);
   padding: 2px 4px; 
   font-size: 85%;
+}
+
+@media only screen and (max-width: 600px) {
+  .hide-in-mobile{
+    display: none !important;
+  }
 }

@@ -3,12 +3,11 @@ import { Route ,Routes ,BrowserRouter } from 'react-router-dom';
 import Start from './Page/start';
 import { useEffect, useState } from 'react';
 import Quiz from './Page/quiz';
-import { getCSVObject , sortCSV } from './Js/utils';
-var jsonFiles = ['Countries-Rise and Fall', 'Inventions' ,'US-presidents','WorldPopulation2022' ,"Art" , 'Contemporary era', 'KoreaHistory']
+import {  sortCSV } from './Js/utils';
 
 const files = {
-  "year" : ["country", "inventions", "history" , "korea", "organizations", "usa"  ],
-  "population" : ["world2022"]
+  "year" : ["history" ,"organizations"]//, "inventions", "history" , "korea", "organizations", "usa"  ],
+  //"population" : ["world2022"]
 }
 
 
@@ -30,8 +29,8 @@ const files = {
     {
     (!jsonDatas)?  null : <>
     
-    <Route path="/that-time/" element={ <Start keywords={jsonDatas.keywords}/>}/>
-    <Route path="/that-time/:paramID" element={<Quiz jsonDatas={jsonDatas} />}/>
+    <Route path="/that-timeline/" element={ <Start keywords={jsonDatas.keywords}/>}/>
+    <Route path="/that-timeline/:paramID" element={<Quiz jsonDatas={jsonDatas} />}/>
 
 
     </> 

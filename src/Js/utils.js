@@ -4,7 +4,7 @@ export async function sortCSV(files){
 
   var items = []; //{unit:'', path:''}
   Object.keys(files).forEach( key =>{
-    items = items.concat(files[key].map( word => ({ unit: key , path: `/that-time/csv/${key}/${word}.csv`} )))
+    items = items.concat(files[key].map( word => ({ unit: key , path: `/that-timeline/csv/${key}/${word}.csv`} )))
   })
 
   var keywordArr = {};  
@@ -35,7 +35,7 @@ export async function sortCSV(files){
         sortedObj[item.unit] = item.array
       }
     })
-    var outData =  { keywords : SortObjectToArray(keywordArr , 5)  , datas : sortedObj} 
+    var outData =  { keywords : SortObjectToArray(keywordArr , 3)  , datas : sortedObj} 
     console.log( outData )
     return outData
   })
@@ -112,4 +112,23 @@ export const colorArr = [ "99B898","FF847C","E84A5F","2A363B","F8B195","F67280",
 export const getRandomColor =()=>{
   const randIndex = Math.floor(Math.random() * colorArr.length)
   return '#'+colorArr[randIndex]
+}
+
+export const getRandomColors =(numberOfItems)=>{
+  if (numberOfItems >= colorArr.length) {
+    return colorArr.slice(); // Return a copy of the original array
+  }
+  const result = [];
+  const indices = new Set();
+
+  while (indices.size < numberOfItems) {
+    const randomIndex = Math.floor(Math.random() * colorArr.length);
+
+    if (!indices.has(randomIndex)) {
+      indices.add(randomIndex);
+      result.push(colorArr[randomIndex]);
+    }
+  }
+
+  return result.map( i=> '#'+i);
 }

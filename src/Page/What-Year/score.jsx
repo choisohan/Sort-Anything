@@ -4,55 +4,61 @@ const WhatYearScore = props => {
 
     const [result, setResult] = useState(0);
     const [texts, setTexts] = useState([]);
+    const [resultImg, setResultImg] = useState(); 
+
+    useEffect(()=>{
+        var textArr = [];
+        var _result = 0;
+        var quizArr = [...props.quizArr];
+        var scores = []; 
+        var yearLength = props.yearRange.end- props.yearRange.start;
+
+        for(var i = 0 ; i < quizArr.length; i ++ ){
+            const arr = [];
+            var diffYear = Math.abs(quizArr[i].yearAnswered - quizArr[i].year);
+            var accuracy = 1 - (diffYear/yearLength);
+            if( diffYear < 20){
+                scores.push(accuracy);
+                _result += (accuracy); 
+                if(diffYear == 0 ){
+                    arr.push(<><b>Perfect!!</b></>);
+                }else{
+                    arr.push(<><b>+{Math.round(accuracy/quizArr.length * ( yearLength-150 ) )}</b></>);
+                }
+            }else{
+                arr.push(<><i>Failed</i></>);
+            }
+            textArr.push(arr)
+        }
+        setTexts(textArr)
+        var totalScore = (_result/quizArr.length) * ( yearLength-150 )
+        setResult( totalScore )
+        props.onQuizArrFeedback(scores , Math.floor(totalScore));
 
 
-    const resultImage =()=>{
-        var className = 'result-image '
-        if(result >= 100 ){
+        var className = 'result-image ';
+        //var yearLength = ( props.yearRange.end- props.yearRange.start-150 ) ; 
+        console.log( totalScore , (yearLength-150) )
+        if( totalScore >= (yearLength-150)*.9 ){
             className += 'best-'
         }
-        else if( result >= 80 && result < 100){
+        else if( totalScore >= (yearLength-150)*.7 && totalScore <  (yearLength-150)*.9){
             className += 'good-'
         }
-        else if(result > 40 ){
+        else if(totalScore > (yearLength-150)*.4 ){
             className += 'ehh-'
         }else{
             className += 'failed-'
         }
         className+= Math.floor( Math.random()* 2 ); 
 
-        return <div className={className} />
-
-
-    }
-    useEffect(()=>{
-        var textArr = [];
-        var _result = 0;//props.quizArr.length * 100; 
-        var quizArr = [...props.quizArr];
-        var scores = []; 
-        for(var i = 0 ; i < quizArr.length; i ++ ){
-            const arr = [];
-            var diffYear = Math.abs(quizArr[i].yearAnswered - quizArr[i].year);
-            var yearLength = props.yearRange.end- props.yearRange.start;
-            var accuracy = 1 - (diffYear/yearLength);
-            if(accuracy > .7){
-                arr.push(<><b>{(accuracy*100).toFixed(0)}%</b></>);
-            }else{
-                arr.push(<><i>{(accuracy*100).toFixed(0)}%</i></>);
-            }
-            scores.push(accuracy);
-            _result+= accuracy*100; 
-            textArr.push(arr)
-        }
-        setTexts(textArr)
-        setResult( _result/quizArr.length )
-        props.onQuizArrFeedback(scores);
-    },[props.quizArr])
+        setResultImg( <div className={className} />)
+    },[])
 
 
     return <div id='score-page'>
-{resultImage()}
-<h2>Your Accuracy : {result}%</h2>
+{resultImg}
+<h2>Your Score : {result.toFixed(0)} / { props.yearRange.end- props.yearRange.start-150 } </h2>
 
 <div>
 
@@ -62,12 +68,12 @@ const WhatYearScore = props => {
 
 
             {texts.map((item, index) => <ul>
-                <div>
+                <div key={index}>
                     <h5 style={{color: props.quizArr[index].color}}> {props.quizArr[index].summary} </h5>
                     { props.quizArr[index].description ? <span> {props.quizArr[index].description} </span> : null }
                 </div>
              {
-                item.map( line => <li>{line}</li>)}</ul>)}
+                item.map( (line, i ) => <li key={i}>{line}</li>)}</ul>)}
 
     </div>
 }
