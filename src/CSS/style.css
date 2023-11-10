@@ -52,7 +52,7 @@ code {
 .draggable{
   background-color: paleturquoise;
 }
-.draggable:hover{
+.draggable:hover, .draggable:active {
   background-color: lightpink;
 }
 
@@ -129,8 +129,8 @@ button.shadow{
   box-shadow: 4px 4px 0px var(--text-color);
   background-color: white;
   margin: 5px; 
-}
-button.shadow:hover{
+} 
+button.shadow:hover , button.shadow:active {
   box-shadow:none !important;
   transform: translate(3px,3px) !important;
   font-weight: bold;
@@ -166,12 +166,12 @@ button button{
   border-style: solid;
   font-weight:600;
 }
-.pill button:hover{
+.pill button:hover , .pill button:active{
   color: black;
   height:100%;
 }
 
-.pill:hover{
+.pill:hover ,.pill:active{
   font-weight: 800;
 }
 .pill.on{
@@ -194,7 +194,7 @@ button button{
   max-width:100px;
   user-select: none;
 }
-.historic-event:hover img{
+.historic-event:hover img, .historic-event:active img{
   max-width:250px;
 }
 .historic-event label{
@@ -210,7 +210,7 @@ button button{
   aspect-ratio: 1/1;
   justify-content: center;
 }
-.historic-event:hover{
+.historic-event:hover, .historic-event:active  {
   z-index: 2;
   outline: 2px solid var( --highlight-color) !important;
 }
@@ -232,7 +232,7 @@ button button{
   text-decoration: line-through;
 }
 
-.historic-event:hover .year-answer{
+.historic-event:hover .year-answer , .historic-event:active .year-answer{
   display: inline;
 }
 
@@ -266,8 +266,6 @@ button button{
   right:0px;
   transform: translate(50%,-50%);
 
-}
-.historic-event:hover::before{
 }
 
 .flex{
@@ -321,7 +319,7 @@ h5{
   color: white;
   opacity: .2;
 }
-.pill button:hover{
+.pill button:hover , .pill button:active {
   opacity: 1;
 }
 .fixed{
@@ -345,7 +343,7 @@ h5{
   bottom:10px;
   left:10px
 }
-#zoom-slider:hover:after{
+#zoom-slider:hover:after , #zoom-slider:active:after{
   position: fixed;
   top:-30px;
   right:50px;
@@ -406,7 +404,8 @@ h5{
 .quizes{
   width:100%
 }
-.quiz-item:has(.historic-event:hover) .correction-range-bar{
+.quiz-item:has(.historic-event:hover) .correction-range-bar,
+.quiz-item:has(.historic-event:active) .correction-range-bar{
   opacity: 1 !important;
 }
 
@@ -448,7 +447,7 @@ h1{
 a{
   color: var(--text-color);
 }
-a:hover{
+a:hover, a:active{
   text-decoration: none;
   font-weight: 600px;
 }
@@ -486,7 +485,7 @@ a:hover{
 *[label]{
   position: relative;
 }
-*[label]:hover::after{
+*[label]:hover::after, *[label]:active::after{
   position: absolute;
   background-color: var(--text-color);
   color: white;
