@@ -188,11 +188,14 @@ button button{
   flex-direction: column;
   max-width: 250px;
   word-break : initial ;
+  touch-action: none;
+  width: min-content; 
 
 }
 .historic-event img{
   max-width:100px;
   user-select: none;
+  pointer-events: none;
 }
 .historic-event:hover img, .historic-event:active img{
   max-width:250px;
@@ -201,7 +204,6 @@ button button{
   color: white;
   cursor: pointer; 
   text-align:center;
-  width:max-content;
   max-width: 200px;;
 
 }
@@ -324,6 +326,7 @@ h5{
 }
 .fixed{
   position: fixed;
+  z-index: 2;
 }
 .top{
   top:0px;
@@ -573,5 +576,8 @@ li{
 @media only screen and (max-width: 600px) {
   .hide-in-mobile{
     display: none !important;
+  }
+  .historic-event:hover img, .historic-event:active img{
+    max-width:150px !important;
   }
 }

@@ -13,15 +13,16 @@ const Draggable = props => {
         if(!e.touches){
              _pos = {x:e.clientX,y:e.clientY}
             window.addEventListener('mouseup', onMouseUp)
-            window.addEventListener('mousemove', onMouseMove)
+            window.addEventListener('mousemove', onMouseMove, { passive: false })
         }else{
              _pos = {x:e.touches[0].clientX,y:e.touches[0].clientY}
             window.addEventListener('touchend', onMouseUp)
-            window.addEventListener('touchmove', onTouchMove)
+            window.addEventListener('touchmove', onTouchMove , { passive: false })
         }
         setClicked(_pos)
     }
     const onMouseUp = e => {
+        
             setClicked()
 
             window.removeEventListener('mouseup', onMouseUp)
@@ -40,6 +41,7 @@ const Draggable = props => {
     }
 
     const onMouseMove = e =>{
+
             setClicked(_clicked =>{
                 var x = ( e.clientX - _clicked.x);
                 var y =  (e.clientY - _clicked.y)/props.zoom;
