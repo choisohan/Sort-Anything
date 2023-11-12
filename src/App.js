@@ -6,8 +6,7 @@ import Quiz from './Page/quiz';
 import {  sortCSV } from './Js/utils';
 
 const files = {
-  "year" : ["history" ,"organizations"]//, "inventions", "history" , "korea", "organizations", "usa"  ],
-  //"population" : ["world2022"]
+  "year" : ["history"]
 }
 
 
