@@ -39,7 +39,11 @@ const WhatYearQuiz = props => {
 
         var arr = props.jsonDatas.datas['year'].filter(item=> {
             var keywords = item.keywords.map(t => t.trim().toLowerCase());
-            return tags.every( t => keywords.includes(t) ) && keywords.length> 0 ? keywords.some(t => centuryTags.includes(t) ) : true
+            if( centuryTags.length > 0 ){
+                return tags.every( t => keywords.includes(t) ) && keywords.some(t => centuryTags.includes(t) )
+            }else{
+                return tags.every( t => keywords.includes(t) )
+            }
         }).map(item => ({...item, year: item.value})) 
 
 
@@ -59,8 +63,9 @@ const WhatYearQuiz = props => {
                 color :colors[index],
                 yearAnswered: Math.max( startCentury * 100 ,
                               Math.min( endCentry * 100 ,
-                               startCentury * 100 + Math.floor( (Math.random() * (endCentry- startCentury) * 100-100) )))
+                               startCentury * 100 + Math.floor( ( Math.random() * (endCentry- startCentury) * 100 - 100  ) )))
             }))
+            arr.forEach( item=> console.log( item.year, item.yearAnswered))
 
             setQuizArr(arr);
            const centuryCount = (endCentry-startCentury);
@@ -79,7 +84,7 @@ const WhatYearQuiz = props => {
         //todo : update with zoom
         setQuizArr( prevArr =>{
           var arr = [...prevArr]; 
-          arr[index].yearAnswered = Math.floor(pos.y)  ;
+          arr[index].yearAnswered = Math.min(yearRange.end, Math.max( yearRange.start ,Math.floor(pos.y) )) ;
           return arr
         })
     }
@@ -138,7 +143,7 @@ return (<>
         </Timeline>
         {score ? <WhatYearScore quizArr={quizArr} onQuizArrFeedback ={(_scores,_totalScore)=>{setScores(_scores);setTotalScore(x=>x+_totalScore) }}
             yearRange={yearRange} onPlayAgain={()=>{getQuiz()}}/> :
-        <button className='shadow big fixed bottom right' onClick={()=>{setScore(true)}} >Get Score</button> }
+        <button className='shadow big fixed bottom right margin' onClick={()=>{setScore(true)}} >Get Score</button> }
 
         </div>
       }

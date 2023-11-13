@@ -190,6 +190,8 @@ button button{
   word-break : initial ;
   touch-action: none;
   width: min-content; 
+  min-width: 100px;
+  font-size: 90%;
 
 }
 .historic-event img{
@@ -198,7 +200,7 @@ button button{
   pointer-events: none;
 }
 .historic-event:hover img, .historic-event:active img{
-  max-width:250px;
+  max-width:220px;
 }
 .historic-event label{
   color: white;
@@ -215,6 +217,7 @@ button button{
 .historic-event:hover, .historic-event:active  {
   z-index: 2;
   outline: 2px solid var( --highlight-color) !important;
+  font-size: 100%;
 }
 
 .year-answer{
